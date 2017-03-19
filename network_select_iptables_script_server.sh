@@ -27,21 +27,21 @@ else
 # services_internal opens the port for the specified subnet, the tun and tap devices
 
 # input udp all
-INPUT_SERVICES_UDP_ALL="123 1194 1196 1197"
+INPUT_SERVICES_UDP_ALL="123 1194 1196 1197 1900 5353 32410 32412 32413 32414"
 # input tcp all
-INPUT_SERVICES_TCP_ALL="21 80 443 60000:60100"
+INPUT_SERVICES_TCP_ALL="21 80 443 990 3005 8324 32400 32469 60000:60100"
 # input udp internal
 INPUT_SERVICES_UDP_INTERNAL="53 137 138"
 # input tcp internal
-INPUT_SERVICES_TCP_INTERNAL="22 139 445 889 4430 5900"
+INPUT_SERVICES_TCP_INTERNAL="22 139 445 889 4430 5900 10000 8080 5938"
 # output udp all dport
 OUTPUT_SERVICES_UDP_ALL_DPORT="53 123 137 138 1194 1196 1197 5353"
 # output tcp all dport
-OUTPUT_SERVICES_TCP_ALL_DPORT="21 22 53 80 139 443 445 515 631 889 3389 4430 5900 8085 9100 9418 11371 60000:60100"
+OUTPUT_SERVICES_TCP_ALL_DPORT="21 22 53 80 139 443 445 515 631 889 990 3389 4430 5900 8085 9100 9418 11371 60000:60100"
 # output udp all sport
 OUTPUT_SERVICES_UDP_ALL_SPORT="53 123 137 138 1194 1196 1197 5353"
 # output tcp all sport
-OUTPUT_SERVICES_TCP_ALL_SPORT="21 22 53 80 139 443 445 515 631 889 3389 4430 5900 8085 9100 9418 11371 60000:60100"
+OUTPUT_SERVICES_TCP_ALL_SPORT="21 22 53 80 139 443 445 515 631 889 990 3389 4430 5900 8085 9100 9418 11371 60000:60100"
 # output udp internal
 OUTPUT_SERVICES_UDP_INTERNAL=""
 # output tcp internal
@@ -908,7 +908,7 @@ iptables -A OUTPUT -p ALL -j DROP
 
 # save iptables-rules and restart service
 iptables-save > /etc/iptables/iptables.rules
-#iptables-save > /etc/iptables/rules.v4
+iptables-save > /etc/iptables/rules.v4
 #ip6tables-save > /etc/iptables/rules.v6
 systemctl enable iptables
 systemctl stop iptables
