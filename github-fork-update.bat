@@ -1,4 +1,4 @@
-cd E:\Sandbox\linux_scripts
+REM cd E:\Sandbox\linux_scripts
 git add .
 git commit -m "%date% %time%"
 git remote add origin https://github.com/ichibsah/linux_scripts.git
