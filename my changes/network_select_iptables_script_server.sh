@@ -7,8 +7,6 @@ then
     exit
 else
 #<<<<<<< HEAD
-
-	NETWORKINTERFACE == "eth0"
 	
 	
 	###
@@ -103,7 +101,7 @@ else
 	###
 	
 	# variable definition if run as standalone script
-#=======
+=======
 
 
 ###
