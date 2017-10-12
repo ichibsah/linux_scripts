@@ -7,6 +7,6 @@ git push -u origin master
 
 git remote add upstream https://github.com/tiiiecherle/linux_scripts.git
 git fetch upstream
-git pull upstream master
+git pull upstream master -f
 
 pause
