@@ -2,7 +2,7 @@ REM cd E:\Sandbox\linux_scripts
 git add .
 git commit -m "%date% %time%"
 git remote add origin https://github.com/ichibsah/linux_scripts.git
-git pull https://github.com/ichibsah/linux_scripts.git
+REM git pull https://github.com/ichibsah/linux_scripts.git
 git push -u origin master
 
 
